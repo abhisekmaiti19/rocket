@@ -1,0 +1,312 @@
+/* Design ideal for 1400*890 px screen size according to figma */
+/* Assignment submitted by Abhisek Maiti  */
+/*  email - abhiskmaiti19@gmail.com  */
+
+/* extra I make it responsive for every screen size */
+
+:root {
+  /* page background color */
+  --bgDark: #2f1893;
+  /* stroke color  */
+  --stroke: #ebeaed;
+  /* heading color  */
+  --heading: #1e0e62;
+  /* twetter color  */
+  --twitter: #1da1f2;
+  /* action primary  */
+  --primary: #25dac5;
+  /* action secondary  */
+  --secondary: #482be7;
+  /* action third  */
+  --third: #e93a7d;
+  /* input text  -- setting it 0.4 opacity*/
+  --text: #151439;
+}
+/* universal */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* style for body  */
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--bgDark);
+}
+
+/* nav bar style  */
+#header_menu {
+  width: 69.42vw;
+  height: 5vh;
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header_menu h1 {
+  width: 11.41%;
+  font-family: "DM Sans";
+  color: white;
+  font-weight: 500;
+  font-size: 1.71vw;
+}
+#menu {
+  width: 55.7%;
+  color: white;
+  display: flex;
+  height: 100%;
+  font-size: 1.28vw;
+  font-family: "Nunito Sans";
+  list-style-type: none;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+}
+#signup {
+  width: 8.5vw;
+  background-color: var(--third);
+  border-radius: 7vw;
+  height: 100%;
+  border: none;
+  color: white;
+  font-size: 1.2vw;
+  font-family: "Nunito Sans";
+}
+
+/* Main section  */
+
+#hero {
+  width: 69.42vw;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid white; */
+  height: 66.66vh;
+}
+
+/* Hero/main left section  */
+
+#text {
+  width: 38%;
+  height: 92%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#text h1 {
+  font-size: 4vw;
+  font-family: "DM Sans";
+  /* border: 1px solid white; */
+  color: white;
+}
+#text p {
+  font-size: 1.5vw;
+  font-family: "DM Sans";
+  color: white;
+}
+#learn {
+  width: 11.21vw;
+  height: 5.6vh;
+  background-color: var(--third);
+  font-size: 1.2vw;
+  border-radius: 7vw;
+  border: none;
+  color: white;
+  font-family: "DM Sans";
+}
+
+/* Hero - Main right section  */
+
+#signup_form {
+  border: 1px solid white;
+  height: 100%;
+  width: 33.57vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 0.5vw;
+  background-color: white;
+  font-family: "DM Sans";
+}
+#signtitle {
+  font-size: 3vw;
+  font-family: "DM Sans";
+  font-weight: bold;
+  color: var(--heading);
+}
+#signup_form form {
+  display: flex;
+  height: 50%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#signup_form form input {
+  width: 23.57vw;
+  height: 5.61vh;
+  border-radius: 7vw;
+  padding-left: 1vw;
+  outline: none;
+  border: 0.14vw var(--stroke) solid;
+  color: black;
+}
+::placeholder {
+  color: var(--text);
+  opacity: 0.4;
+}
+#checkbox {
+  width: 23.57vw;
+  display: flex;
+  align-items: center;
+  /* border: 1px solid black; */
+  justify-content: flex-start;
+  height: 1.71vw;
+  gap: 3%;
+}
+
+#checkbox label {
+  font-size: 1.14vw;
+  color: var(--text);
+  opacity: 0.4;
+  width: 100%;
+}
+#chk {
+  border-radius: 100%;
+}
+#signin {
+  width: 23.57vw;
+  height: 5.61vh;
+  border-radius: 7vw;
+  background-color: var(--secondary);
+  color: white;
+  border: none;
+  font-size: 1.28vw;
+}
+#divider {
+  display: flex;
+  width: 23.57vw;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--text);
+  opacity: 0.4;
+}
+#divider hr {
+  color: var(--stroke);
+  width: 10vw;
+  height: 1px;
+}
+#twitter {
+  width: 23.57vw;
+  height: 5.61vh;
+  background-color: var(--twitter);
+  color: white;
+  border-radius: 7vw;
+  border: none;
+  font-size: 1.28vw;
+}
+#ask {
+  width: 23.57vw;
+  display: flex;
+  gap: 5%;
+  color: var(--text);
+  justify-content: center;
+}
+#ask label {
+  opacity: 0.4;
+}
+#ask a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+/* Responsive code for mobile  */
+
+@media screen and (max-width: 500px) {
+  #hero {
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+  }
+  #text {
+    width: 100%;
+    height: 40%;
+    justify-content: space-evenly;
+  }
+  #text h1 {
+    font-size: 8vw;
+  }
+  #text p {
+    font-size: 2.5vw;
+  }
+  #text button {
+    width: 40%;
+    font-size: 3vw;
+  }
+  #signup_form {
+    width: 100%;
+    height: 60%;
+    justify-content: space-evenly;
+    padding: 5%;
+    border-radius: 3vw;
+  }
+
+  #signup_form h1 {
+    font-size: 5vw;
+  }
+  form {
+    width: 90%;
+  }
+  #signin {
+    width: 90%;
+
+    font-size: 4vw;
+  }
+  #signup_form form input {
+    width: 100%;
+    padding-left: 10%;
+  }
+  #checkbox {
+    width: 90%;
+    height: 10%;
+  }
+  #checkbox label {
+    font-size: 3vw;
+  }
+  #twitter {
+    width: 80%;
+    font-size: 3vw;
+  }
+  #ask {
+    width: 80%;
+    font-size: 3vw;
+  }
+  #header_menu {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 10%;
+  }
+  #header_menu h1 {
+    width: 100%;
+    font-size: 6vw;
+  }
+  #menu {
+    width: 100%;
+
+    justify-content: space-evenly;
+  }
+  li {
+    font-size: 3vw;
+  }
+  #signup {
+    width: 20%;
+    font-size: 150%;
+    height: 60%;
+  }
+}
